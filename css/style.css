@@ -1,0 +1,16 @@
+body {
+  background-color: rgb(218, 140, 140);
+}
+
+h1 {
+  color: rgb(20, 61, 15);
+}
+
+ol {
+  font-style: italic;
+  font-family: sans-serif;
+}
+
+p {
+  align-self: center;
+}
