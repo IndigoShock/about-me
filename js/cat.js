@@ -35,7 +35,7 @@ alert('For each of the following questions, answer with a "Y" for Yes or "N" for
 //Question 1
 var ImprovQuestion = prompt('Do I like improv?').toUpperCase();
 if (ImprovQuestion === 'Y' || ImprovQuestion === 'Yes') {
-  alert ('Yes! I have been practicing and performing for almost 5 years. I volunteer at The Pocket Theater.')
+  alert ('Yes! I have been practicing and performing for almost 5 years. I volunteer at The Pocket Theater.');
   console.log('Q1: CORRECT! User has chosen Wisely');
 } else {
   alert ('Sad pandas.');
@@ -75,7 +75,7 @@ if (MushroomQuestion === 'Y' || MushroomQuestion === 'Yes') {
 // Question 5
 var CoffeeQuestion = prompt('Do I like coffee?').toUpperCase();
 if (CoffeeQuestion === 'Y' || CoffeeQuestion === 'Yes') {
-  alert ('Nope. I do not know why but caffeine (which coffee has a lot of) does not bode well with me. But I love herbal tea!')
+  alert ('Nope. I do not know why but caffeine (which coffee has a lot of) does not bode well with me. But I love herbal tea!');
   console.log('Q5: WRONG! User has chosen Unwisely');
 } else {
   alert ('You\'re right! I have not figured out why but caffeine does not go well with me anymore.');
