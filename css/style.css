@@ -14,3 +14,7 @@ ol {
 p {
   align-self: center;
 }
+
+ul {
+  font-style: inherit;
+}
