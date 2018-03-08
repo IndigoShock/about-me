@@ -111,22 +111,25 @@ while (numberOfGuesses < 4) {
 
 // Question 7 (Array)
 var myCountryArray = ['united states', 'south korea', 'guam','denmark', 'thailand', 'netherlands', 'ireland', 'spain','greece','canada','france'];
+var countriesVisit = false;
 
-//Q7.a Correct or Wrong. Allow user up to 6 guesses.
-var CountriesLived = prompt('Can you name one other country I have visited?').toLowerCase();
+//Q7a. Correct or Wrong. Allow user up to 6 guesses.
 for(numberOfGuesses = 0; numberOfGuesses < 6; numberOfGuesses++){
+  if (countriesVisit === true){
+    break;
+  }
+  var countriesList = prompt('Can you name one other country I have visited?').toLowerCase();
   for (var i = 0; i < myCountryArray.length; i++) {
-    if(CountriesLived === myCountryArray[i]) {
+    console.log(countriesList);
+    if(countriesList === myCountryArray[i]) {
+      countriesVisit = true;
+      alert ('Yes! And a few others!');
       console.log('Q7: Correct! Sweet~');
       numberOfCorrect++;
       break;
-    } else {
-      alert ('Nope!');
-      console.log('Q7: Nope!');
     }
   }
 }
-
 
 //Ending: Counter alert for how many correct
 alert('You got ' + (numberOfCorrect) + ' right!');
