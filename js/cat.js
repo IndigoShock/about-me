@@ -2,7 +2,7 @@
 
 // IF/ELSE
 
-//PSEUDOCODE
+// PSEUDOCODE
 // if(some condition is met) {
 //   do this
 // } else {
@@ -27,32 +27,36 @@
 //   alert ('Yep, I am 28! (29 this Saturday)');
 // }
 
-//5 Questions
+//7 Questions
+
+var numberOfCorrect = 0;
 
 //Statement 0
 alert('For each of the following questions, answer with a "Y" for Yes or "N" for No');
 
-//Question 1
+//Question 1 (yes/no)
 var ImprovQuestion = prompt('Do I like improv?').toUpperCase();
 if (ImprovQuestion === 'Y' || ImprovQuestion === 'Yes') {
   alert ('Yes! I have been practicing and performing for almost 5 years. I volunteer at The Pocket Theater.');
   console.log('Q1: CORRECT! User has chosen Wisely');
+  numberOfCorrect++;
 } else {
   alert ('Sad pandas.');
   console.log('Q1: WRONG! User has chosen Unwisely');
 }
 
-//Question 2
+//Question 2 (yes/no)
 var VolunteerQuestion = prompt('Do I like volunteering?').toUpperCase();
 if (VolunteerQuestion === 'Y' || VolunteerQuestion === 'Yes') {
   alert ('Yes!');
   console.log('Q2: CORRECT! User has chosen Wisely');
+  numberOfCorrect++;
 } else {
   alert ('Lots of sad pandas.');
   console.log('Q2: WRONG! User has chosen Unwisely');
 }
 
-//Question 3
+//Question 3 (yes/no)
 var BrokenBones = prompt('Have I broken any bones?').toUpperCase();
 if (BrokenBones === 'Y' || BrokenBones === 'Yes') {
   alert ('No! I am tanky.');
@@ -60,19 +64,21 @@ if (BrokenBones === 'Y' || BrokenBones === 'Yes') {
 } else {
   alert ('Right! I have not. Lots of close calls but miraculously, no dice.');
   console.log('Q3: CORRECT! User has chosen Wisely');
+  numberOfCorrect++;
 }
 
-//Question 4
+//Question 4 (yes/no)
 var MushroomQuestion = prompt('Do I like eating mushrooms?').toUpperCase();
 if (MushroomQuestion === 'Y' || MushroomQuestion === 'Yes') {
   alert ('Yes! I used to hate them when I was younger but I eat them more often.');
   console.log('Q4: CORRECT! User has chosen Wisely');
+  numberOfCorrect++;
 } else {
   alert ('Oodles of sad panda noodles.');
   console.log('Q4: WRONG! User has chosen Unwisely');
 }
 
-// Question 5
+// Question 5 (yes/no)
 var CoffeeQuestion = prompt('Do I like coffee?').toUpperCase();
 if (CoffeeQuestion === 'Y' || CoffeeQuestion === 'Yes') {
   alert ('Nope. I do not know why but caffeine (which coffee has a lot of) does not bode well with me. But I love herbal tea!');
@@ -80,7 +86,50 @@ if (CoffeeQuestion === 'Y' || CoffeeQuestion === 'Yes') {
 } else {
   alert ('You\'re right! I have not figured out why but caffeine does not go well with me anymore.');
   console.log('Q5: CORRECT! User has chosen Wisely');
+  numberOfCorrect++;
 }
+
+// Question 6 (Numerical)
+//Objective: We need a number of guesses variable. Want to loop until they get the right answer. Or until 4 times.
+var numberOfGuesses = 0;
+while (numberOfGuesses < 4) {
+  var TurtleQuestion = prompt('How many turtles do I have at my parent\'s house? Use numbers only please.').toUpperCase();
+  if (TurtleQuestion === '3') {
+    alert ('Right! They are named Rocky, Bully and Girl');
+    console.log('Q6: CORRECT! User has chosen Wisely');
+    numberOfCorrect++;
+    break;
+  } else {
+    if (parseInt(TurtleQuestion) > 3)
+      alert ('Too many!');
+    if (parseInt(TurtleQuestion) < 3)
+      alert ('Too few!');
+    console.log('Q6: WRONG! User has chosen Unwisely');
+  }
+  numberOfGuesses++;
+}
+
+// Question 7 (Array)
+var myCountryArray = ['united states', 'south korea', 'guam','denmark', 'thailand', 'netherlands', 'ireland', 'spain','greece','canada','france'];
+
+//Q7.a Correct or Wrong. Allow user up to 6 guesses.
+var CountriesLived = prompt('Can you name one other country I have visited?').toLowerCase();
+for(numberOfGuesses = 0; numberOfGuesses < 6; numberOfGuesses++){
+  for (var i = 0; i < myCountryArray.length; i++) {
+    if(CountriesLived === myCountryArray[i]) {
+      console.log('Q7: Correct! Sweet~');
+      numberOfCorrect++;
+      break;
+    } else {
+      alert ('Nope!');
+      console.log('Q7: Nope!');
+    }
+  }
+}
+
+
+//Ending: Counter alert for how many correct
+alert('You got ' + (numberOfCorrect) + ' right!');
 
 // if(first condition) {
 //   do this;
