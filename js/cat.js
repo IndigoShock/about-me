@@ -27,6 +27,14 @@
 //   alert ('Yep, I am 28! (29 this Saturday)');
 // }
 
+// if(first condition) {
+//   do this;
+// } else if(second condition) {
+//   do this;
+// } else {
+//   do this;
+// }
+
 //7 Questions
 
 var numberOfCorrect = 0;
@@ -133,11 +141,3 @@ for(numberOfGuesses = 0; numberOfGuesses < 6; numberOfGuesses++){
 
 //Ending: Counter alert for how many correct
 alert('You got ' + (numberOfCorrect) + ' right!');
-
-// if(first condition) {
-//   do this;
-// } else if(second condition) {
-//   do this;
-// } else {
-//   do this;
-// }
