@@ -35,6 +35,8 @@
 //   do this;
 // }
 
+//do a while function for first question
+
 //7 Questions
 
 var numberOfCorrect = 0;
@@ -43,8 +45,8 @@ var numberOfCorrect = 0;
 alert('For each of the following questions, answer with a "Y" for Yes or "N" for No');
 
 //Question 1 (yes/no)
-var ImprovQuestion = prompt('Do I like improv?').toUpperCase();
-if (ImprovQuestion === 'Y' || ImprovQuestion === 'Yes') {
+var improvQuestion = prompt('Do I like improv?').toUpperCase();
+if (improvQuestion === 'Y' || improvQuestion === 'Yes') {
   alert ('Yes! I have been practicing and performing for almost 5 years. I volunteer at The Pocket Theater.');
   console.log('Q1: CORRECT! User has chosen Wisely');
   numberOfCorrect++;
@@ -54,8 +56,8 @@ if (ImprovQuestion === 'Y' || ImprovQuestion === 'Yes') {
 }
 
 //Question 2 (yes/no)
-var VolunteerQuestion = prompt('Do I like volunteering?').toUpperCase();
-if (VolunteerQuestion === 'Y' || VolunteerQuestion === 'Yes') {
+var volunteerQuestion = prompt('Do I like volunteering?').toUpperCase();
+if (volunteerQuestion === 'Y' || volunteerQuestion === 'Yes') {
   alert ('Yes!');
   console.log('Q2: CORRECT! User has chosen Wisely');
   numberOfCorrect++;
@@ -65,8 +67,8 @@ if (VolunteerQuestion === 'Y' || VolunteerQuestion === 'Yes') {
 }
 
 //Question 3 (yes/no)
-var BrokenBones = prompt('Have I broken any bones?').toUpperCase();
-if (BrokenBones === 'Y' || BrokenBones === 'Yes') {
+var brokenBones = prompt('Have I broken any bones?').toUpperCase();
+if (brokenBones === 'Y' || brokenBones === 'Yes') {
   alert ('No! I am tanky.');
   console.log('Q3: WRONG! User has chosen Unwisely');
 } else {
@@ -76,8 +78,8 @@ if (BrokenBones === 'Y' || BrokenBones === 'Yes') {
 }
 
 //Question 4 (yes/no)
-var MushroomQuestion = prompt('Do I like eating mushrooms?').toUpperCase();
-if (MushroomQuestion === 'Y' || MushroomQuestion === 'Yes') {
+var mushroomQuestion = prompt('Do I like eating mushrooms?').toUpperCase();
+if (mushroomQuestion === 'Y' || mushroomQuestion === 'Yes') {
   alert ('Yes! I used to hate them when I was younger but I eat them more often.');
   console.log('Q4: CORRECT! User has chosen Wisely');
   numberOfCorrect++;
@@ -87,8 +89,8 @@ if (MushroomQuestion === 'Y' || MushroomQuestion === 'Yes') {
 }
 
 // Question 5 (yes/no)
-var CoffeeQuestion = prompt('Do I like coffee?').toUpperCase();
-if (CoffeeQuestion === 'Y' || CoffeeQuestion === 'Yes') {
+var coffeeQuestion = prompt('Do I like coffee?').toUpperCase();
+if (coffeeQuestion === 'Y' || coffeeQuestion === 'Yes') {
   alert ('Nope. I do not know why but caffeine (which coffee has a lot of) does not bode well with me. But I love herbal tea!');
   console.log('Q5: WRONG! User has chosen Unwisely');
 } else {
@@ -101,16 +103,16 @@ if (CoffeeQuestion === 'Y' || CoffeeQuestion === 'Yes') {
 //Objective: We need a number of guesses variable. Want to loop until they get the right answer. Or until 4 times.
 var numberOfGuesses = 0;
 while (numberOfGuesses < 4) {
-  var TurtleQuestion = prompt('How many turtles do I have at my parent\'s house? Use numbers only please.').toUpperCase();
-  if (TurtleQuestion === '3') {
+  var turtleQuestion = prompt('How many turtles do I have at my parent\'s house? Use numbers only please.').toUpperCase();
+  if (turtleQuestion === '3') {
     alert ('Right! They are named Rocky, Bully and Girl');
     console.log('Q6: CORRECT! User has chosen Wisely');
     numberOfCorrect++;
     break;
   } else {
-    if (parseInt(TurtleQuestion) > 3)
+    if (parseInt(turtleQuestion) > 3)
       alert ('Too many!');
-    if (parseInt(TurtleQuestion) < 3)
+    if (parseInt(turtleQuestion) < 3)
       alert ('Too few!');
     console.log('Q6: WRONG! User has chosen Unwisely');
   }
